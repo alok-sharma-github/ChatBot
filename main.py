@@ -20,7 +20,7 @@ def main():
     st.markdown('- Type "movie avatar" to get information about the movie Avatar.')
     st.markdown('- Type "director inception" to get the director of the movie Inception.')
     st.markdown('- Type "genre titanic" to get the genre of the movie Titanic.')
-    st.markdown('- Type "ratings the shawshank redemption" to get the ratings of the movie The Shawshank Redemption.')
+    st.markdown('- Type "ratings red" to get the ratings of the movie The Shawshank Redemption.')
     st.markdown('- Type "revenue joker" to get the revenue of the movie Joker.')
 
 if __name__ == '__main__':
