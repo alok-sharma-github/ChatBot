@@ -2,7 +2,7 @@
 from utils import extract_info, preprocess_data, get_similarity_matrix, get_recommendations
 from data import load_dataset
 
-file_path = "C:\\Users\\alok\Documents\\book\Projects\\recommender\\movies (1).csv"
+file_path = "movies (1).csv"
 
 # Dataset ko load karein
 movies = load_dataset(file_path)
