@@ -38,7 +38,7 @@ responses = {
 def get_movie_info(query):
     movie_data = extract_info(movies) 
     for movie_title, genre, budget, cast, director, overview, languages, release_date, revenue, popularity, tagline, keywords,runtime in movie_data:
-        if movie_title.lower() or movie_title in query:
+        if movie_title.lower() in query:
             return responses['movie_info'].format(movie_title=movie_title, 
                                                   overview=overview,
                                                   genre=genre,
@@ -55,7 +55,7 @@ def get_movie_info(query):
 def get_genre_info(query):
     movie_data = extract_info(movies) 
     for movie_title, genre, budget, cast, director, overview, languages, release_date, revenue, popularity, tagline, keywords,runtime in movie_data:
-        if movie_title.lower() or movie_title in query:
+        if movie_title.lower() in query:
             return responses['genre_info'].format(movie_title=movie_title, 
                                                   overview=overview,
                                                   genre=genre,
@@ -72,7 +72,7 @@ def get_genre_info(query):
 def get_cast_info(query):
     movie_data = extract_info(movies)  # Call extract_info to get movie data
     for movie_title, genre, budget, cast, director, overview, languages, release_date, revenue, popularity, tagline, keywords,runtime in movie_data:
-        if movie_title.lower() or movie_title in query:
+        if movie_title.lower() in query:
             return responses['cast_info'].format(movie_title=movie_title, 
                                                   overview=overview,
                                                   genre=genre,
@@ -89,7 +89,7 @@ def get_cast_info(query):
 def get_director_info(query):
     movie_data = extract_info(movies)  # Call extract_info to get movie data
     for movie_title, genre, budget, cast, director, overview, languages, release_date, revenue, popularity, tagline, keywords,runtime in movie_data:
-        if movie_title.lower() or movie_title in query:
+        if movie_title.lower() in query:
             return responses['director_info'].format(movie_title=movie_title, 
                                                   overview=overview,
                                                   genre=genre,
@@ -106,7 +106,7 @@ def get_director_info(query):
 def get_release_date_info(query):
     movie_data = extract_info(movies)  # Call extract_info to get movie data
     for movie_title, genre, budget, cast, director, overview, languages, release_date, revenue, popularity, tagline, keywords,runtime in movie_data:
-        if movie_title.lower() or movie_title in query:
+        if movie_title.lower() in query:
             return responses['release_date_info'].format(movie_title=movie_title, 
                                                   overview=overview,
                                                   genre=genre,
@@ -123,7 +123,7 @@ def get_release_date_info(query):
 def get_revenue_info(query):
     movie_data = extract_info(movies)  # Call extract_info to get movie data
     for movie_title, genre, budget, cast, director, overview, languages, release_date, revenue, popularity, tagline, keywords,runtime in movie_data:
-        if movie_title.lower() or movie_title in query:
+        if movie_title.lower() in query:
             return responses['revenue_info'].format(movie_title=movie_title, 
                                                   overview=overview,
                                                   genre=genre,
@@ -140,7 +140,7 @@ def get_revenue_info(query):
 def get_runtime_info(query):
     movie_data = extract_info(movies)  # Call extract_info to get movie data
     for movie_title, genre, budget, cast, director, overview, languages, release_date, revenue, popularity, tagline, keywords, runtime in movie_data:
-        if movie_title.lower() or movie_title in query:
+        if movie_title.lower() in query:
             return responses['runtime_info'].format(movie_title=movie_title, 
                                                   overview=overview,
                                                   genre=genre,
@@ -158,7 +158,7 @@ def get_runtime_info(query):
 def get_rating_info(query):
     movie_data = extract_info(movies)  # Call extract_info to get movie data
     for movie_title, genre, budget, cast, director, overview, languages, release_date, revenue, popularity, tagline, keywords, runtime in movie_data:
-        if movie_title.lower() or movie_title in query:
+        if movie_title.lower()  in query:
             return responses['rating_info'].format(movie_title=movie_title, 
                                                   overview=overview,
                                                   genre=genre,
