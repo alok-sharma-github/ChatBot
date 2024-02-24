@@ -1,6 +1,7 @@
 # ChatBot
 
-![ChatBot](https://github.com/alok-sharma-github/ChatBot/assets/81555853/fb366187-9361-44b5-9341-67a39fff104c)
+![image](https://github.com/alok-sharma-github/ChatBot/assets/81555853/d90ed6aa-9a57-45d3-afee-e7355ec07ebb)
+
 
 ## Overview
 This project is a movie recommendation chatbot that provides information about movies based on user queries. It utilizes natural language processing techniques to understand user inputs and retrieve relevant data from a movie dataset.
