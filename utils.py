@@ -11,7 +11,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from difflib import get_close_matches
 from data import load_dataset
-file_path = "C:\\Users\\alok\Documents\\book\Projects\\recommender\\movies (1).csv"
+file_path = "movies (1).csv"
 # Dataset ko load karein
 movies = load_dataset(file_path)
 
