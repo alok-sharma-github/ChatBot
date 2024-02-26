@@ -6,6 +6,8 @@ file_path = "movies (1).csv"
 
 # Dataset ko load karein
 movies = load_dataset(file_path)
+combined_features = preprocess_data(movies)
+similarity_matrix = get_similarity_matrix(combined_features=combined_features)
 
 intents = {
     'greetings': ['Hey','Hi','Good Morning'],
@@ -184,7 +186,6 @@ def get_recommended_list(query, movies, similarity_matrix):
             else:
                 return recommendations
     return "Sorry, I couldn't find information about that movie."
-
 
 
 

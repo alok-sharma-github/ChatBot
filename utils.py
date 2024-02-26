@@ -104,6 +104,10 @@ combined_features = preprocess_data(movies)
 # Calculate similarity matrix
 similarity_matrix = get_similarity_matrix(combined_features)
 
+
+
+
+
 #-----------------------------------------------------------------------------------------------------------
 
 

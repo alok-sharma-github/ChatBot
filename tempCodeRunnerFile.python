@@ -1,0 +1,10 @@
+from intent_handler import get_recommended_list
+from data import load_dataset
+from utils import extract_info, preprocess_data, get_similarity_matrix, get_recommendations
+file_path = "movies (1).csv"
+movies = load_dataset(file_path)
+combined_features = preprocess_data(movies)
+similarity_matrix = get_similarity_matrix(combined_features=combined_features)
+
+get_recommendations("Spectre", movies, similarity_matrix)
+get_recommended_list("spectre", movies, similarity_matrix)
