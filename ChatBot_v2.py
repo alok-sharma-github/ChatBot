@@ -355,7 +355,7 @@ def get_language_info(query):
 # APP
 
 
-st.title("IMDB ChatBot")
+st.title("IMDB ChatBot v-1.2")
 query = st.text_input("Enter Movie Name")
 query = query.lower()
 words = query.split()
@@ -424,5 +424,6 @@ if words:
                 st.text_area('Info:', movie_info)
 
 else: st.write("Enter a Movie Name")
+
 
     
