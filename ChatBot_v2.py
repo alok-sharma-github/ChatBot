@@ -423,7 +423,7 @@ if words:
                 movie_info = get_language_info(selected_movie)
                 st.text_area('Info:', movie_info)
 
-else: st.write("Intents: movie, genre, cast, released, rating, language, production")
+else: st.write("Intents: movie, genre, cast, released, rating, language, production, director")
 
 
     
