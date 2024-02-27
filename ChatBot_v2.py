@@ -362,66 +362,67 @@ words = query.split()
 
 # movie_title, movie_genres, movie_overview, lead_actor, lead_actress, 
 #director, movie_release_date, movie_popularity, languages, production_companies
-for intent, keywords in intents.items():
-    if words[0] in keywords:
-        st.write("Intent matched:", intent)
-        if intent == 'movie_info':
-            movie_name = ' '.join(words[1:])
-            st.write('You selected:', movie_name)
-            suggested_list = fetch_movie_suggestions(movie_name)
-            selected_movie = st.selectbox("choose: ",suggested_list)
-            movie_info = get_movie_info(selected_movie)
-            st.text_area('Info:', movie_info)
-        if intent == 'genre_info':
-            movie_name = ' '.join(words[1:])
-            st.write('You selected:', movie_name)
-            suggested_list = fetch_movie_suggestions(movie_name)
-            selected_movie = st.selectbox("choose: ",suggested_list)
-            movie_info = get_genre_info(selected_movie)
-            st.text_area('Info:', movie_info)
-        if intent == 'director_info':
-            movie_name = ' '.join(words[1:])
-            st.write('You selected:', movie_name)
-            suggested_list = fetch_movie_suggestions(movie_name)
-            selected_movie = st.selectbox("choose: ",suggested_list)
-            movie_info = get_director_info(selected_movie)
-            st.text_area('Info:', movie_info)
-        if intent == 'cast_info':
-            movie_name = ' '.join(words[1:])
-            st.write('You selected:', movie_name)
-            suggested_list = fetch_movie_suggestions(movie_name)
-            selected_movie = st.selectbox("choose: ",suggested_list)
-            movie_info = get_cast_info(selected_movie)
-            st.text_area('Info:', movie_info)
-        if intent == 'release_date_info':
-            movie_name = ' '.join(words[1:])
-            st.write('You selected:', movie_name)
-            suggested_list = fetch_movie_suggestions(movie_name)
-            selected_movie = st.selectbox("choose: ",suggested_list)
-            movie_info = get_release_date_info(selected_movie)
-            st.text_area('Info:', movie_info)
-        if intent == 'production_info':
-            movie_name = ' '.join(words[1:])
-            st.write('You selected:', movie_name)
-            suggested_list = fetch_movie_suggestions(movie_name)
-            selected_movie = st.selectbox("choose: ",suggested_list)
-            movie_info = get_production_info(selected_movie)
-            st.text_area('Info:', movie_info)
-        if intent == 'rating_info':
-            movie_name = ' '.join(words[1:])
-            st.write('You selected:', movie_name)
-            suggested_list = fetch_movie_suggestions(movie_name)
-            selected_movie = st.selectbox("choose: ",suggested_list)
-            movie_info = get_popularity_info(selected_movie)
-            st.text_area('Info:', movie_info)
-        if intent == 'language_info':
-            movie_name = ' '.join(words[1:])
-            st.write('You selected:', movie_name)
-            suggested_list = fetch_movie_suggestions(movie_name)
-            selected_movie = st.selectbox("choose: ",suggested_list)
-            movie_info = get_language_info(selected_movie)
-            st.text_area('Info:', movie_info)
+if words:
+    for intent, keywords in intents.items():
+        if words[0] in keywords:
+            st.write("Intent matched:", intent)
+            if intent == 'movie_info':
+                movie_name = ' '.join(words[1:])
+                st.write('You selected:', movie_name)
+                suggested_list = fetch_movie_suggestions(movie_name)
+                selected_movie = st.selectbox("choose: ",suggested_list)
+                movie_info = get_movie_info(selected_movie)
+                st.text_area('Info:', movie_info)
+            if intent == 'genre_info':
+                movie_name = ' '.join(words[1:])
+                st.write('You selected:', movie_name)
+                suggested_list = fetch_movie_suggestions(movie_name)
+                selected_movie = st.selectbox("choose: ",suggested_list)
+                movie_info = get_genre_info(selected_movie)
+                st.text_area('Info:', movie_info)
+            if intent == 'director_info':
+                movie_name = ' '.join(words[1:])
+                st.write('You selected:', movie_name)
+                suggested_list = fetch_movie_suggestions(movie_name)
+                selected_movie = st.selectbox("choose: ",suggested_list)
+                movie_info = get_director_info(selected_movie)
+                st.text_area('Info:', movie_info)
+            if intent == 'cast_info':
+                movie_name = ' '.join(words[1:])
+                st.write('You selected:', movie_name)
+                suggested_list = fetch_movie_suggestions(movie_name)
+                selected_movie = st.selectbox("choose: ",suggested_list)
+                movie_info = get_cast_info(selected_movie)
+                st.text_area('Info:', movie_info)
+            if intent == 'release_date_info':
+                movie_name = ' '.join(words[1:])
+                st.write('You selected:', movie_name)
+                suggested_list = fetch_movie_suggestions(movie_name)
+                selected_movie = st.selectbox("choose: ",suggested_list)
+                movie_info = get_release_date_info(selected_movie)
+                st.text_area('Info:', movie_info)
+            if intent == 'production_info':
+                movie_name = ' '.join(words[1:])
+                st.write('You selected:', movie_name)
+                suggested_list = fetch_movie_suggestions(movie_name)
+                selected_movie = st.selectbox("choose: ",suggested_list)
+                movie_info = get_production_info(selected_movie)
+                st.text_area('Info:', movie_info)
+            if intent == 'rating_info':
+                movie_name = ' '.join(words[1:])
+                st.write('You selected:', movie_name)
+                suggested_list = fetch_movie_suggestions(movie_name)
+                selected_movie = st.selectbox("choose: ",suggested_list)
+                movie_info = get_popularity_info(selected_movie)
+                st.text_area('Info:', movie_info)
+            if intent == 'language_info':
+                movie_name = ' '.join(words[1:])
+                st.write('You selected:', movie_name)
+                suggested_list = fetch_movie_suggestions(movie_name)
+                selected_movie = st.selectbox("choose: ",suggested_list)
+                movie_info = get_language_info(selected_movie)
+                st.text_area('Info:', movie_info)
 
-
+else: st.write("Enter a Movie Name")
 
     
