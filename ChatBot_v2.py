@@ -370,7 +370,7 @@ st.markdown(
     }
     .stMarkdown {
         font-size: 18px;
-        color: #444444;
+        color: #008000;
     }
     </style>
     """,
