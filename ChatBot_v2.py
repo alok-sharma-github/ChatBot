@@ -353,10 +353,33 @@ def get_language_info(query):
 #     return "Sorry, I don't understand that query."
 
 # APP
-
+st.markdown(
+    """
+    <style>
+    /* Add custom styles here */
+    .stApp {
+        font-family: 'Arial', sans-serif;
+    }
+    .stTextInput>div>div>input {
+        font-size: 16px;
+        color: #333333;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        padding: 10px;
+        border: 2px solid #cccccc;
+    }
+    .stMarkdown {
+        font-size: 18px;
+        color: #444444;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.title("IMDB ChatBot v-1.2")
 query = st.text_input("Enter [intent] [movie name]")
+st.markdown("Intents: movie, genre, cast, released, rating, language, production, director")
 query = query.lower()
 words = query.split()
 
